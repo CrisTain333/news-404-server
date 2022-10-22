@@ -1,14 +1,14 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const port = process.env.PORT || 5000;
+const port =  5000;
 
 app.use(cors());
 
-const categories = require("./data/categories.json");
+const categories = require("./Data/categories.json");
 const news = require("./Data/news.json");
 
-app.get('/api/v1/news',(req,res)=>{
+app.get('/news',(req,res)=>{
 res.send(news);
 })
 
